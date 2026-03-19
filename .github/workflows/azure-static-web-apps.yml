@@ -13,7 +13,6 @@ env:
   APP_LOCATION: "/"
   API_LOCATION: ""
   OUTPUT_LOCATION: "out"
-  SKIP_DEPLOY_ON_MISSING_SECRETS: "true"
 
 jobs:
   build_and_deploy:
@@ -34,6 +33,8 @@ jobs:
           api_location: ${{ env.API_LOCATION }}
           output_location: ${{ env.OUTPUT_LOCATION }}
           app_build_command: npm run build
+        env:
+          SKIP_DEPLOY_ON_MISSING_SECRETS: "true"
 
   close_pull_request:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
