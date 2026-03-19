@@ -7,12 +7,14 @@ import { GuideTable } from "@/components/guide/GuideTable";
 import { SliceNavigator } from "@/components/guide/SliceNavigator";
 import { UserSwitcher } from "@/components/guide/UserSwitcher";
 import { tvGuideApi } from "@/lib/api";
+import { PROGRAM_DETAILS_FETCH_MODE } from "@/lib/config/app";
 import { buildGuideRows } from "@/lib/guide/buildGuideRows";
 import { shiftProgramsToGuideBase } from "@/lib/guide/mockSchedule";
 import { formatSliceLabel, getAvailableSlices, getGuideBaseStart } from "@/lib/guide/slice";
 import type { Channel } from "@/lib/types/channel";
 import type { GuideRow } from "@/lib/types/guide";
 import type { Program } from "@/lib/types/program";
+import type { ProgramDetails } from "@/lib/types/programDetails";
 import type { UserPreferences } from "@/lib/types/preferences";
 import type { UserOption } from "@/lib/types/user";
 import styles from "./GuideShell.module.css";
@@ -28,6 +30,8 @@ export function GuideShell() {
   const [users, setUsers] = useState<UserOption[]>([]);
   const [preferences, setPreferences] = useState<UserPreferences | null>(null);
   const [programs, setPrograms] = useState<Program[]>([]);
+  const [detailsByProgramId, setDetailsByProgramId] = useState<Record<string, ProgramDetails>>({});
+  const [loadingProgramId, setLoadingProgramId] = useState<string | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
 
   const currentSlice = availableSlices[sliceIndex];
@@ -45,12 +49,16 @@ export function GuideShell() {
     async function loadData() {
       try {
         setStatus("loading");
-        const [channelsData, usersData, preferencesData, scheduleTemplates] = await Promise.all([
+        const [channelsData, usersData, preferencesData, scheduleTemplates, allDetails] =
+          await Promise.all([
           tvGuideApi.getChannels(),
           tvGuideApi.getUsers(),
           tvGuideApi.getUserPreferences(userId),
-          tvGuideApi.getScheduleTemplates()
-        ]);
+          tvGuideApi.getScheduleTemplates(),
+          PROGRAM_DETAILS_FETCH_MODE === "eager"
+            ? tvGuideApi.getAllProgramDetails()
+            : Promise.resolve({})
+          ]);
 
         if (ignore) {
           return;
@@ -60,6 +68,7 @@ export function GuideShell() {
         setUsers(usersData);
         setPreferences(preferencesData);
         setPrograms(shiftProgramsToGuideBase(scheduleTemplates, availableSlices[0].start));
+        setDetailsByProgramId(allDetails);
         setStatus("ready");
       } catch (error) {
         console.error("Failed to load guide data", error);
@@ -134,6 +143,25 @@ export function GuideShell() {
     });
   }, [channels, currentSlice.end, currentSlice.start, preferences, programs]);
 
+  async function handleSegmentHover(programId: string) {
+    if (detailsByProgramId[programId] || PROGRAM_DETAILS_FETCH_MODE === "eager") {
+      return;
+    }
+
+    try {
+      setLoadingProgramId(programId);
+      const details = await tvGuideApi.getProgramDetails(programId);
+      setDetailsByProgramId((current) => ({
+        ...current,
+        [programId]: details
+      }));
+    } catch (error) {
+      console.error("Failed to load program details", error);
+    } finally {
+      setLoadingProgramId((current) => (current === programId ? null : current));
+    }
+  }
+
   return (
     <main className={styles.page}>
       <div className={styles.shell}>
@@ -159,7 +187,12 @@ export function GuideShell() {
         ) : status === "loading" ? (
           <div className={styles.message}>Loading 2-hour slice...</div>
         ) : (
-          <GuideTable rows={rows} />
+          <GuideTable
+            rows={rows}
+            detailsByProgramId={detailsByProgramId}
+            loadingProgramId={loadingProgramId}
+            onSegmentHover={handleSegmentHover}
+          />
         )}
         <GuideFooter />
       </div>

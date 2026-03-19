@@ -2,6 +2,7 @@ import type { TVGuideApi } from "@/lib/api/types";
 import type { Channel } from "@/lib/types/channel";
 import type { UserPreferences } from "@/lib/types/preferences";
 import type { Program } from "@/lib/types/program";
+import type { ProgramDetails } from "@/lib/types/programDetails";
 import type { UserOption } from "@/lib/types/user";
 
 async function fetchJson<T>(path: string): Promise<T> {
@@ -28,6 +29,22 @@ export function createStaticDataApi(): TVGuideApi {
       ]);
 
       return schedules.flat();
-    }
+    },
+    getProgramDetails: async (programId: string) => {
+      const details = await fetchJson<Record<string, ProgramDetails>>("/data/program-details.json");
+
+      const programDetails = details[programId];
+      if (!programDetails) {
+        throw new Error(`Missing program details for ${programId}`);
+      }
+
+      await new Promise((resolve) => {
+        window.setTimeout(resolve, 150);
+      });
+
+      return programDetails;
+    },
+    getAllProgramDetails: () =>
+      fetchJson<Record<string, ProgramDetails>>("/data/program-details.json")
   };
 }

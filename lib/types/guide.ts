@@ -3,6 +3,7 @@ export type GuideSegment = {
   title: string;
   visibleMinutes: number;
   widthPercent: number;
+  fullDurationMinutes: number;
 };
 
 export type GuideRow = {

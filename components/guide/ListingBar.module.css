@@ -8,11 +8,13 @@
 }
 
 .segment {
+  position: relative;
   min-width: 0;
   display: flex;
   align-items: center;
   padding: 0 10px;
   border-right: 1px solid rgba(255, 255, 255, 0.12);
+  outline: none;
 }
 
 .primary {
@@ -29,6 +31,10 @@
   white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.segment:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--accent);
 }
 
 .empty {

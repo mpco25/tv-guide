@@ -46,7 +46,8 @@ export function buildGuideRows({
         programId: entry.program.id,
         title: entry.program.title,
         visibleMinutes: entry.visibleMinutes,
-        widthPercent: getWidthPercent(entry.visibleMinutes, sliceMinutes)
+        widthPercent: getWidthPercent(entry.visibleMinutes, sliceMinutes),
+        fullDurationMinutes: getVisibleDurationMinutes(entry.program.start, entry.program.end)
       }));
 
     return {

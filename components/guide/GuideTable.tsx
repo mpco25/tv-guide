@@ -1,12 +1,21 @@
 import type { GuideRow } from "@/lib/types/guide";
+import type { ProgramDetails } from "@/lib/types/programDetails";
 import { GuideRowView } from "./GuideRow";
 import styles from "./GuideTable.module.css";
 
 type GuideTableProps = {
   rows: GuideRow[];
+  detailsByProgramId: Record<string, ProgramDetails>;
+  loadingProgramId: string | null;
+  onSegmentHover: (programId: string) => void;
 };
 
-export function GuideTable({ rows }: GuideTableProps) {
+export function GuideTable({
+  rows,
+  detailsByProgramId,
+  loadingProgramId,
+  onSegmentHover
+}: GuideTableProps) {
   return (
     <section className={styles.table}>
       <div className={styles.head}>
@@ -15,7 +24,13 @@ export function GuideTable({ rows }: GuideTableProps) {
       </div>
       <div className={styles.body}>
         {rows.map((row) => (
-          <GuideRowView key={row.channelId} row={row} />
+          <GuideRowView
+            key={row.channelId}
+            row={row}
+            detailsByProgramId={detailsByProgramId}
+            loadingProgramId={loadingProgramId}
+            onSegmentHover={onSegmentHover}
+          />
         ))}
       </div>
     </section>

@@ -64,13 +64,15 @@ describe("buildGuideRows", () => {
         programId: "bbc-1",
         title: "Sherlock",
         visibleMinutes: 90,
-        widthPercent: 75
+        widthPercent: 75,
+        fullDurationMinutes: 90
       },
       {
         programId: "bbc-2",
         title: "Newsnight",
         visibleMinutes: 30,
-        widthPercent: 25
+        widthPercent: 25,
+        fullDurationMinutes: 30
       }
     ]);
     expect(rows[1].segments).toEqual([
@@ -78,13 +80,15 @@ describe("buildGuideRows", () => {
         programId: "nbc-1",
         title: "Dateline NBC",
         visibleMinutes: 60,
-        widthPercent: 50
+        widthPercent: 50,
+        fullDurationMinutes: 60
       },
       {
         programId: "nbc-2",
         title: "Chicago P.D.",
         visibleMinutes: 60,
-        widthPercent: 50
+        widthPercent: 50,
+        fullDurationMinutes: 60
       }
     ]);
   });

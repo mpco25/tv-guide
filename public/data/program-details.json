@@ -1,0 +1,282 @@
+{
+  "abc-1800": {
+    "programId": "abc-1800",
+    "synopsis": "An evening bulletin covering politics, business, and international headlines.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["David Muir"]
+  },
+  "abc-1900": {
+    "programId": "abc-1900",
+    "synopsis": "Contestants answer clues across categories in a fast-paced quiz format.",
+    "genre": "Quiz",
+    "year": 2026,
+    "cast": ["Ken Jennings"]
+  },
+  "abc-2000": {
+    "programId": "abc-2000",
+    "synopsis": "Late-night interviews and current affairs segments from the ABC studio.",
+    "genre": "Talk",
+    "year": 2026,
+    "cast": ["Juju Chang"]
+  },
+  "abc-2100": {
+    "programId": "abc-2100",
+    "synopsis": "Long-form reporting focused on investigations and human-interest stories.",
+    "genre": "News Magazine",
+    "year": 2026,
+    "cast": ["Deborah Roberts"]
+  },
+  "abc-2200": {
+    "programId": "abc-2200",
+    "synopsis": "Monologue, celebrity interviews, and comedy sketches from Hollywood.",
+    "genre": "Talk",
+    "year": 2026,
+    "cast": ["Jimmy Kimmel"]
+  },
+  "abc-2300": {
+    "programId": "abc-2300",
+    "synopsis": "Overnight bulletin with breaking updates and world headlines.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ABC News Team"]
+  },
+  "bbc-1800": {
+    "programId": "bbc-1800",
+    "synopsis": "Magazine-style early evening show mixing entertainment and features.",
+    "genre": "Magazine",
+    "year": 2026,
+    "cast": ["Alex Jones", "Roman Kemp"]
+  },
+  "bbc-1900": {
+    "programId": "bbc-1900",
+    "synopsis": "Walford stories continue with family conflict and neighborhood drama.",
+    "genre": "Soap",
+    "year": 2026,
+    "cast": ["EastEnders Ensemble"]
+  },
+  "bbc-1930": {
+    "programId": "bbc-1930",
+    "synopsis": "National and international headlines in a compact evening bulletin.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["BBC News Team"]
+  },
+  "bbc-2000": {
+    "programId": "bbc-2000",
+    "synopsis": "Sherlock and Watson investigate a case with unusual clues across London.",
+    "genre": "Drama",
+    "year": 2014,
+    "cast": ["Benedict Cumberbatch", "Martin Freeman"]
+  },
+  "bbc-2130": {
+    "programId": "bbc-2130",
+    "synopsis": "Analysis, interviews, and reaction to the day's biggest political stories.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["Victoria Derbyshire"]
+  },
+  "bbc-2200": {
+    "programId": "bbc-2200",
+    "synopsis": "A panel of guests debates major current affairs issues with audience questions.",
+    "genre": "Current Affairs",
+    "year": 2026,
+    "cast": ["Fiona Bruce"]
+  },
+  "bbc-2300": {
+    "programId": "bbc-2300",
+    "synopsis": "Conversation, comedy, and guests from film, music, and television.",
+    "genre": "Entertainment",
+    "year": 2026,
+    "cast": ["Graham Norton"]
+  },
+  "espn-1800": {
+    "programId": "espn-1800",
+    "synopsis": "Highlights, interviews, and major sports headlines from around the league.",
+    "genre": "Sports News",
+    "year": 2026,
+    "cast": ["ESPN Studio Team"]
+  },
+  "espn-1900": {
+    "programId": "espn-1900",
+    "synopsis": "Analysts break down roster moves, injuries, and key matchups.",
+    "genre": "Sports Analysis",
+    "year": 2026,
+    "cast": ["Laura Rutledge", "Ryan Clark"]
+  },
+  "espn-2000": {
+    "programId": "espn-2000",
+    "synopsis": "Pregame analysis with lineups, storylines, and key tactical matchups.",
+    "genre": "Sports Analysis",
+    "year": 2026,
+    "cast": ["Malika Andrews", "Stephen A. Smith"]
+  },
+  "espn-2100": {
+    "programId": "espn-2100",
+    "synopsis": "Live NBA coverage with commentary, stats, and in-game analysis.",
+    "genre": "Live Sports",
+    "year": 2026,
+    "cast": ["ESPN Commentary Team"]
+  },
+  "espn-2200": {
+    "programId": "espn-2200",
+    "synopsis": "Late-night scores, highlights, and reaction across US sports.",
+    "genre": "Sports News",
+    "year": 2026,
+    "cast": ["SportsCenter Team"]
+  },
+  "itv-1800": {
+    "programId": "itv-1800",
+    "synopsis": "Regional reports and local updates from around the UK.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ITV Regional Team"]
+  },
+  "itv-1830": {
+    "programId": "itv-1830",
+    "synopsis": "Village life and relationships unfold in the Yorkshire Dales.",
+    "genre": "Soap",
+    "year": 2026,
+    "cast": ["Emmerdale Ensemble"]
+  },
+  "itv-1900": {
+    "programId": "itv-1900",
+    "synopsis": "Street drama continues with family clashes and pub intrigue.",
+    "genre": "Soap",
+    "year": 2026,
+    "cast": ["Coronation Street Ensemble"]
+  },
+  "itv-2000": {
+    "programId": "itv-2000",
+    "synopsis": "Teams race to build a prize fund before facing the chaser.",
+    "genre": "Quiz",
+    "year": 2026,
+    "cast": ["Bradley Walsh"]
+  },
+  "itv-2100": {
+    "programId": "itv-2100",
+    "synopsis": "Evening headlines with UK and international updates.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ITV News Team"]
+  },
+  "itv-2130": {
+    "programId": "itv-2130",
+    "synopsis": "A crime-solving vicar and detective investigate a new case.",
+    "genre": "Drama",
+    "year": 2026,
+    "cast": ["Robson Green", "Rishi Nair"]
+  },
+  "itv-2200": {
+    "programId": "itv-2200",
+    "synopsis": "A coastal community is pulled into another murder investigation.",
+    "genre": "Drama",
+    "year": 2026,
+    "cast": ["Marsha Thomason"]
+  },
+  "itv-2300": {
+    "programId": "itv-2300",
+    "synopsis": "Late bulletin with politics, world headlines, and overnight outlook.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ITV News Team"]
+  },
+  "nbc-1800": {
+    "programId": "nbc-1800",
+    "synopsis": "A compact network bulletin with national and global headlines.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["Lester Holt"]
+  },
+  "nbc-1830": {
+    "programId": "nbc-1830",
+    "synopsis": "Entertainment news and celebrity coverage from Hollywood.",
+    "genre": "Entertainment News",
+    "year": 2026,
+    "cast": ["Access Hollywood Team"]
+  },
+  "nbc-1900": {
+    "programId": "nbc-1900",
+    "synopsis": "Word and puzzle game show with bonus rounds and studio audience.",
+    "genre": "Game Show",
+    "year": 2026,
+    "cast": ["Ryan Seacrest", "Vanna White"]
+  },
+  "nbc-2000": {
+    "programId": "nbc-2000",
+    "synopsis": "Investigative journalism and documentary-style true-crime reporting.",
+    "genre": "News Magazine",
+    "year": 2026,
+    "cast": ["Lester Holt"]
+  },
+  "nbc-2100": {
+    "programId": "nbc-2100",
+    "synopsis": "Chicago intelligence unit tackles a new case in the city.",
+    "genre": "Drama",
+    "year": 2026,
+    "cast": ["Jason Beghe", "Patrick John Flueger"]
+  },
+  "nbc-2200": {
+    "programId": "nbc-2200",
+    "synopsis": "Opening monologue, desk bits, and celebrity interviews.",
+    "genre": "Talk",
+    "year": 2026,
+    "cast": ["Jimmy Fallon"]
+  },
+  "nbc-2300": {
+    "programId": "nbc-2300",
+    "synopsis": "Late-night comedy and interviews from NBC Studio 6B.",
+    "genre": "Talk",
+    "year": 2026,
+    "cast": ["Seth Meyers"]
+  },
+  "zdf-1800": {
+    "programId": "zdf-1800",
+    "synopsis": "Early evening news bulletin with domestic and international coverage.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ZDF News Team"]
+  },
+  "zdf-1830": {
+    "programId": "zdf-1830",
+    "synopsis": "Detectives investigate a new case with forensic and procedural detail.",
+    "genre": "Crime",
+    "year": 2026,
+    "cast": ["SOKO Leipzig Ensemble"]
+  },
+  "zdf-1930": {
+    "programId": "zdf-1930",
+    "synopsis": "Evening analysis with political interviews and headline recap.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ZDF News Team"]
+  },
+  "zdf-2000": {
+    "programId": "zdf-2000",
+    "synopsis": "The mountain doctor balances family pressure and urgent cases.",
+    "genre": "Drama",
+    "year": 2026,
+    "cast": ["Hans Sigl"]
+  },
+  "zdf-2145": {
+    "programId": "zdf-2145",
+    "synopsis": "Short late update with overnight headlines and analysis.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ZDF News Team"]
+  },
+  "zdf-2200": {
+    "programId": "zdf-2200",
+    "synopsis": "Long-form interview show with politics, culture, and current affairs.",
+    "genre": "Interview",
+    "year": 2026,
+    "cast": ["Markus Lanz"]
+  },
+  "zdf-2315": {
+    "programId": "zdf-2315",
+    "synopsis": "A short overnight bulletin with key headlines before midnight.",
+    "genre": "News",
+    "year": 2026,
+    "cast": ["ZDF News Team"]
+  }
+}
