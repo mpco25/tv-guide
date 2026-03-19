@@ -1,0 +1,93 @@
+[
+  {
+    "id": "abc-2000",
+    "channelId": "abc",
+    "title": "Nightline",
+    "start": "2026-03-19T20:00:00Z",
+    "end": "2026-03-19T21:00:00Z"
+  },
+  {
+    "id": "abc-2100",
+    "channelId": "abc",
+    "title": "20/20",
+    "start": "2026-03-19T21:00:00Z",
+    "end": "2026-03-19T22:00:00Z"
+  },
+  {
+    "id": "bbc-2000",
+    "channelId": "bbc",
+    "title": "Sherlock",
+    "start": "2026-03-19T20:00:00Z",
+    "end": "2026-03-19T21:30:00Z"
+  },
+  {
+    "id": "bbc-2130",
+    "channelId": "bbc",
+    "title": "Newsnight",
+    "start": "2026-03-19T21:30:00Z",
+    "end": "2026-03-19T22:00:00Z"
+  },
+  {
+    "id": "espn-2000",
+    "channelId": "espn",
+    "title": "NBA Countdown",
+    "start": "2026-03-19T20:00:00Z",
+    "end": "2026-03-19T21:00:00Z"
+  },
+  {
+    "id": "espn-2100",
+    "channelId": "espn",
+    "title": "NBA Live",
+    "start": "2026-03-19T21:00:00Z",
+    "end": "2026-03-19T22:00:00Z"
+  },
+  {
+    "id": "itv-2000",
+    "channelId": "itv",
+    "title": "The Chase",
+    "start": "2026-03-19T20:00:00Z",
+    "end": "2026-03-19T21:00:00Z"
+  },
+  {
+    "id": "itv-2100",
+    "channelId": "itv",
+    "title": "ITV News",
+    "start": "2026-03-19T21:00:00Z",
+    "end": "2026-03-19T21:30:00Z"
+  },
+  {
+    "id": "itv-2130",
+    "channelId": "itv",
+    "title": "Grantchester",
+    "start": "2026-03-19T21:30:00Z",
+    "end": "2026-03-19T22:00:00Z"
+  },
+  {
+    "id": "nbc-2000",
+    "channelId": "nbc",
+    "title": "Dateline NBC",
+    "start": "2026-03-19T20:00:00Z",
+    "end": "2026-03-19T21:00:00Z"
+  },
+  {
+    "id": "nbc-2100",
+    "channelId": "nbc",
+    "title": "Chicago P.D.",
+    "start": "2026-03-19T21:00:00Z",
+    "end": "2026-03-19T22:00:00Z"
+  },
+  {
+    "id": "zdf-2000",
+    "channelId": "zdf",
+    "title": "Der Bergdoktor",
+    "start": "2026-03-19T20:15:00Z",
+    "end": "2026-03-19T21:45:00Z"
+  },
+  {
+    "id": "zdf-2145",
+    "channelId": "zdf",
+    "title": "heute-journal update",
+    "start": "2026-03-19T21:45:00Z",
+    "end": "2026-03-19T22:00:00Z"
+  }
+]

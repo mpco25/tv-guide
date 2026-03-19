@@ -1,0 +1,79 @@
+[
+  {
+    "id": "abc-2200",
+    "channelId": "abc",
+    "title": "Jimmy Kimmel Live!",
+    "start": "2026-03-19T22:00:00Z",
+    "end": "2026-03-19T23:00:00Z"
+  },
+  {
+    "id": "abc-2300",
+    "channelId": "abc",
+    "title": "ABC News Overnight",
+    "start": "2026-03-19T23:00:00Z",
+    "end": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "bbc-2200",
+    "channelId": "bbc",
+    "title": "Question Time",
+    "start": "2026-03-19T22:00:00Z",
+    "end": "2026-03-19T23:00:00Z"
+  },
+  {
+    "id": "bbc-2300",
+    "channelId": "bbc",
+    "title": "The Graham Norton Show",
+    "start": "2026-03-19T23:00:00Z",
+    "end": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "espn-2200",
+    "channelId": "espn",
+    "title": "SportsCenter Night",
+    "start": "2026-03-19T22:00:00Z",
+    "end": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "itv-2200",
+    "channelId": "itv",
+    "title": "The Bay",
+    "start": "2026-03-19T22:00:00Z",
+    "end": "2026-03-19T23:00:00Z"
+  },
+  {
+    "id": "itv-2300",
+    "channelId": "itv",
+    "title": "ITV Night News",
+    "start": "2026-03-19T23:00:00Z",
+    "end": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "nbc-2200",
+    "channelId": "nbc",
+    "title": "The Tonight Show",
+    "start": "2026-03-19T22:00:00Z",
+    "end": "2026-03-19T23:00:00Z"
+  },
+  {
+    "id": "nbc-2300",
+    "channelId": "nbc",
+    "title": "Late Night",
+    "start": "2026-03-19T23:00:00Z",
+    "end": "2026-03-20T00:00:00Z"
+  },
+  {
+    "id": "zdf-2200",
+    "channelId": "zdf",
+    "title": "Markus Lanz",
+    "start": "2026-03-19T22:00:00Z",
+    "end": "2026-03-19T23:15:00Z"
+  },
+  {
+    "id": "zdf-2315",
+    "channelId": "zdf",
+    "title": "heute Xpress",
+    "start": "2026-03-19T23:15:00Z",
+    "end": "2026-03-20T00:00:00Z"
+  }
+]

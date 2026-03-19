@@ -1,0 +1,40 @@
+.nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.button {
+  border: 1px solid var(--border);
+  background: rgba(77, 208, 225, 0.08);
+  color: var(--text);
+  padding: 8px 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .label {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+}

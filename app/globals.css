@@ -1,0 +1,40 @@
+:root {
+  --bg: #101820;
+  --panel: #16222e;
+  --panel-strong: #0a1118;
+  --text: #f5f7ef;
+  --muted: #9fb0b9;
+  --accent: #ffd447;
+  --accent-2: #4dd0e1;
+  --segment: #1f6f8b;
+  --segment-alt: #2c8b6f;
+  --border: #37505d;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at top, rgba(77, 208, 225, 0.12), transparent 35%),
+    linear-gradient(180deg, #0b1117 0%, #101820 45%, #0b1117 100%);
+  color: var(--text);
+  font-family: var(--font-mono);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

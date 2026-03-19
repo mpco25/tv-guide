@@ -1,0 +1,25 @@
+.table {
+  width: 100%;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.body {
+  display: grid;
+}
+
+@media (max-width: 900px) {
+  .head {
+    grid-template-columns: 120px 1fr;
+    padding: 10px 12px;
+  }
+}

@@ -1,0 +1,27 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.label {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.select {
+  min-width: 180px;
+  border: 1px solid var(--border);
+  background: rgba(77, 208, 225, 0.08);
+  color: var(--text);
+  padding: 8px 10px;
+}
+
+@media (max-width: 900px) {
+  .wrap {
+    padding: 12px;
+  }
+}

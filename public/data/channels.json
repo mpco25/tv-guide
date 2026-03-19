@@ -1,0 +1,8 @@
+[
+  { "id": "abc", "name": "ABC", "country": "US" },
+  { "id": "bbc", "name": "BBC", "country": "UK" },
+  { "id": "espn", "name": "ESPN", "country": "US" },
+  { "id": "itv", "name": "ITV", "country": "UK" },
+  { "id": "nbc", "name": "NBC", "country": "US" },
+  { "id": "zdf", "name": "ZDF", "country": "DE" }
+]

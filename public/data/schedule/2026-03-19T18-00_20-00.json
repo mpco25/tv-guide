@@ -1,0 +1,114 @@
+[
+  {
+    "id": "abc-1800",
+    "channelId": "abc",
+    "title": "World News Tonight",
+    "start": "2026-03-19T18:00:00Z",
+    "end": "2026-03-19T19:00:00Z"
+  },
+  {
+    "id": "abc-1900",
+    "channelId": "abc",
+    "title": "Jeopardy!",
+    "start": "2026-03-19T19:00:00Z",
+    "end": "2026-03-19T20:00:00Z"
+  },
+  {
+    "id": "bbc-1800",
+    "channelId": "bbc",
+    "title": "The One Show",
+    "start": "2026-03-19T18:00:00Z",
+    "end": "2026-03-19T19:00:00Z"
+  },
+  {
+    "id": "bbc-1900",
+    "channelId": "bbc",
+    "title": "EastEnders",
+    "start": "2026-03-19T19:00:00Z",
+    "end": "2026-03-19T19:30:00Z"
+  },
+  {
+    "id": "bbc-1930",
+    "channelId": "bbc",
+    "title": "BBC News",
+    "start": "2026-03-19T19:30:00Z",
+    "end": "2026-03-19T20:00:00Z"
+  },
+  {
+    "id": "espn-1800",
+    "channelId": "espn",
+    "title": "SportsCenter",
+    "start": "2026-03-19T18:00:00Z",
+    "end": "2026-03-19T19:00:00Z"
+  },
+  {
+    "id": "espn-1900",
+    "channelId": "espn",
+    "title": "NFL Live",
+    "start": "2026-03-19T19:00:00Z",
+    "end": "2026-03-19T20:00:00Z"
+  },
+  {
+    "id": "itv-1800",
+    "channelId": "itv",
+    "title": "Regional News",
+    "start": "2026-03-19T18:00:00Z",
+    "end": "2026-03-19T18:30:00Z"
+  },
+  {
+    "id": "itv-1830",
+    "channelId": "itv",
+    "title": "Emmerdale",
+    "start": "2026-03-19T18:30:00Z",
+    "end": "2026-03-19T19:00:00Z"
+  },
+  {
+    "id": "itv-1900",
+    "channelId": "itv",
+    "title": "Coronation Street",
+    "start": "2026-03-19T19:00:00Z",
+    "end": "2026-03-19T20:00:00Z"
+  },
+  {
+    "id": "nbc-1800",
+    "channelId": "nbc",
+    "title": "NBC Nightly News",
+    "start": "2026-03-19T18:00:00Z",
+    "end": "2026-03-19T18:30:00Z"
+  },
+  {
+    "id": "nbc-1830",
+    "channelId": "nbc",
+    "title": "Access Hollywood",
+    "start": "2026-03-19T18:30:00Z",
+    "end": "2026-03-19T19:00:00Z"
+  },
+  {
+    "id": "nbc-1900",
+    "channelId": "nbc",
+    "title": "Wheel of Fortune",
+    "start": "2026-03-19T19:00:00Z",
+    "end": "2026-03-19T20:00:00Z"
+  },
+  {
+    "id": "zdf-1800",
+    "channelId": "zdf",
+    "title": "heute",
+    "start": "2026-03-19T18:00:00Z",
+    "end": "2026-03-19T18:30:00Z"
+  },
+  {
+    "id": "zdf-1830",
+    "channelId": "zdf",
+    "title": "SOKO Leipzig",
+    "start": "2026-03-19T18:30:00Z",
+    "end": "2026-03-19T19:30:00Z"
+  },
+  {
+    "id": "zdf-1930",
+    "channelId": "zdf",
+    "title": "heute journal",
+    "start": "2026-03-19T19:30:00Z",
+    "end": "2026-03-19T20:00:00Z"
+  }
+]
