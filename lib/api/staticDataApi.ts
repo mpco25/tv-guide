@@ -20,6 +20,14 @@ export function createStaticDataApi(): TVGuideApi {
     getUsers: () => fetchJson<UserOption[]>("/data/users/index.json"),
     getUserPreferences: (userId: string) =>
       fetchJson<UserPreferences>(`/data/users/${userId}.json`),
-    getSchedule: (sliceKey: string) => fetchJson<Program[]>(`/data/schedule/${sliceKey}.json`)
+    getScheduleTemplates: async () => {
+      const schedules = await Promise.all([
+        fetchJson<Program[]>("/data/schedule/2026-03-19T18-00_20-00.json"),
+        fetchJson<Program[]>("/data/schedule/2026-03-19T20-00_22-00.json"),
+        fetchJson<Program[]>("/data/schedule/2026-03-19T22-00_00-00.json")
+      ]);
+
+      return schedules.flat();
+    }
   };
 }

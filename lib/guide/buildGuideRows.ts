@@ -21,19 +21,11 @@ export function buildGuideRows({
   sliceEnd
 }: BuildGuideRowsArgs): GuideRow[] {
   const hidden = new Set(preferences.hidden);
-  const favorites = new Set(preferences.favorites);
   const sliceMinutes = 120;
 
   const visibleChannels = channels
     .filter((channel) => !hidden.has(channel.id))
-    .sort((left, right) => {
-      const favoriteDelta = Number(favorites.has(right.id)) - Number(favorites.has(left.id));
-      if (favoriteDelta !== 0) {
-        return favoriteDelta;
-      }
-
-      return left.name.localeCompare(right.name);
-    });
+    .sort((left, right) => left.name.localeCompare(right.name));
 
   return visibleChannels.map((channel) => {
     const segments = programs

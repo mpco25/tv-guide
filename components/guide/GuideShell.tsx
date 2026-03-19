@@ -8,7 +8,8 @@ import { SliceNavigator } from "@/components/guide/SliceNavigator";
 import { UserSwitcher } from "@/components/guide/UserSwitcher";
 import { tvGuideApi } from "@/lib/api";
 import { buildGuideRows } from "@/lib/guide/buildGuideRows";
-import { formatSliceLabel, getAvailableSlices } from "@/lib/guide/slice";
+import { shiftProgramsToGuideBase } from "@/lib/guide/mockSchedule";
+import { formatSliceLabel, getAvailableSlices, getGuideBaseStart } from "@/lib/guide/slice";
 import type { Channel } from "@/lib/types/channel";
 import type { GuideRow } from "@/lib/types/guide";
 import type { Program } from "@/lib/types/program";
@@ -19,7 +20,8 @@ import styles from "./GuideShell.module.css";
 const DEFAULT_USER_ID = "user-1";
 
 export function GuideShell() {
-  const availableSlices = useMemo(() => getAvailableSlices(), []);
+  const guideBaseStart = useMemo(() => getGuideBaseStart(), []);
+  const availableSlices = useMemo(() => getAvailableSlices(guideBaseStart), [guideBaseStart]);
   const [sliceIndex, setSliceIndex] = useState(0);
   const [userId, setUserId] = useState(DEFAULT_USER_ID);
   const [channels, setChannels] = useState<Channel[]>([]);
@@ -43,11 +45,11 @@ export function GuideShell() {
     async function loadData() {
       try {
         setStatus("loading");
-        const [channelsData, usersData, preferencesData, scheduleData] = await Promise.all([
+        const [channelsData, usersData, preferencesData, scheduleTemplates] = await Promise.all([
           tvGuideApi.getChannels(),
           tvGuideApi.getUsers(),
           tvGuideApi.getUserPreferences(userId),
-          tvGuideApi.getSchedule(currentSlice.key)
+          tvGuideApi.getScheduleTemplates()
         ]);
 
         if (ignore) {
@@ -57,7 +59,7 @@ export function GuideShell() {
         setChannels(channelsData);
         setUsers(usersData);
         setPreferences(preferencesData);
-        setPrograms(scheduleData);
+        setPrograms(shiftProgramsToGuideBase(scheduleTemplates, availableSlices[0].start));
         setStatus("ready");
       } catch (error) {
         console.error("Failed to load guide data", error);
@@ -72,7 +74,7 @@ export function GuideShell() {
     return () => {
       ignore = true;
     };
-  }, [currentSlice.key, userId]);
+  }, [availableSlices, userId]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {

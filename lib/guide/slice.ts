@@ -4,26 +4,26 @@ export type SliceDefinition = {
   end: string;
 };
 
-const SLICES: SliceDefinition[] = [
-  {
-    key: "2026-03-19T18-00_20-00",
-    start: "2026-03-19T18:00:00Z",
-    end: "2026-03-19T20:00:00Z"
-  },
-  {
-    key: "2026-03-19T20-00_22-00",
-    start: "2026-03-19T20:00:00Z",
-    end: "2026-03-19T22:00:00Z"
-  },
-  {
-    key: "2026-03-19T22-00_00-00",
-    start: "2026-03-19T22:00:00Z",
-    end: "2026-03-20T00:00:00Z"
-  }
-];
+const TWO_HOURS_MS = 2 * 60 * 60 * 1000;
 
-export function getAvailableSlices() {
-  return SLICES;
+export function getGuideBaseStart(now: Date = new Date()) {
+  const base = new Date(now);
+  base.setSeconds(0, 0);
+
+  return base;
+}
+
+export function getAvailableSlices(baseStart: Date) {
+  return Array.from({ length: 3 }, (_, index) => {
+    const sliceStart = new Date(baseStart.getTime() + index * TWO_HOURS_MS);
+    const sliceEnd = new Date(sliceStart.getTime() + TWO_HOURS_MS);
+
+    return {
+      key: sliceStart.toISOString(),
+      start: sliceStart.toISOString(),
+      end: sliceEnd.toISOString()
+    };
+  });
 }
 
 export function formatSliceLabel(slice: SliceDefinition) {
@@ -39,15 +39,13 @@ export function formatSliceLabel(slice: SliceDefinition) {
   const startPart = new Intl.DateTimeFormat("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false,
-    timeZone: "UTC"
+    hour12: false
   }).format(start);
 
   const endPart = new Intl.DateTimeFormat("en-GB", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false,
-    timeZone: "UTC"
+    hour12: false
   }).format(end);
 
   return `${datePart.toUpperCase()} ${startPart}-${endPart}`;

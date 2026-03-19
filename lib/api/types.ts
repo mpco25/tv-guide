@@ -7,5 +7,5 @@ export type TVGuideApi = {
   getChannels: () => Promise<Channel[]>;
   getUsers: () => Promise<UserOption[]>;
   getUserPreferences: (userId: string) => Promise<UserPreferences>;
-  getSchedule: (sliceKey: string) => Promise<Program[]>;
+  getScheduleTemplates: () => Promise<Program[]>;
 };
