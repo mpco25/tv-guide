@@ -193,6 +193,11 @@ export function PreferencesShell() {
           <div className={styles.message}>Loading preferences...</div>
         ) : (
           <div className={styles.content}>
+            <div className={styles.notice}>
+              Your preferences are stored in local storage (saved in this browser on this device, so
+              they stay after refresh, are not sent to any servers, and do not automatically follow
+              you to another browser or computer).
+            </div>
             <div className={styles.tabs} role="tablist" aria-label="Preferences sections">
               {TABS.map((tab) => (
                 <button
