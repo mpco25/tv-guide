@@ -13,7 +13,8 @@ const channels: Channel[] = [
 const preferences: UserPreferences = {
   userId: "user-1",
   favorites: ["bbc"],
-  hidden: ["abc"]
+  hidden: ["abc"],
+  showEmptyChannels: true
 };
 
 const programs: Program[] = [

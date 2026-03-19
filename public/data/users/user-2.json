@@ -1,5 +1,6 @@
 {
   "userId": "user-2",
   "favorites": ["abc", "nbc"],
-  "hidden": ["espn"]
+  "hidden": ["espn"],
+  "showEmptyChannels": true
 }

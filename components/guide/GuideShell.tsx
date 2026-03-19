@@ -10,6 +10,7 @@ import { tvGuideApi } from "@/lib/api";
 import { PROGRAM_DETAILS_FETCH_MODE } from "@/lib/config/app";
 import { buildGuideRows } from "@/lib/guide/buildGuideRows";
 import { shiftProgramsToGuideBase } from "@/lib/guide/mockSchedule";
+import { getEffectivePreferences, readStoredUserId, writeStoredUserId } from "@/lib/preferences/storage";
 import { formatSliceLabel, getAvailableSlices, getGuideBaseStart } from "@/lib/guide/slice";
 import type { Channel } from "@/lib/types/channel";
 import type { GuideRow } from "@/lib/types/guide";
@@ -37,7 +38,7 @@ export function GuideShell() {
   const currentSlice = availableSlices[sliceIndex];
 
   useEffect(() => {
-    const storedUserId = window.localStorage.getItem("tv-guide-user-id");
+    const storedUserId = readStoredUserId();
     if (storedUserId) {
       setUserId(storedUserId);
     }
@@ -66,7 +67,7 @@ export function GuideShell() {
 
         setChannels(channelsData);
         setUsers(usersData);
-        setPreferences(preferencesData);
+        setPreferences(getEffectivePreferences(preferencesData));
         setPrograms(shiftProgramsToGuideBase(scheduleTemplates, availableSlices[0].start));
         setDetailsByProgramId(allDetails);
         setStatus("ready");
@@ -108,7 +109,7 @@ export function GuideShell() {
         if (firstUser) {
           event.preventDefault();
           setUserId(firstUser.id);
-          window.localStorage.setItem("tv-guide-user-id", firstUser.id);
+          writeStoredUserId(firstUser.id);
         }
       }
 
@@ -117,7 +118,7 @@ export function GuideShell() {
         if (secondUser) {
           event.preventDefault();
           setUserId(secondUser.id);
-          window.localStorage.setItem("tv-guide-user-id", secondUser.id);
+          writeStoredUserId(secondUser.id);
         }
       }
     }
@@ -165,13 +166,17 @@ export function GuideShell() {
   return (
     <main className={styles.page}>
       <div className={styles.shell}>
-        <GuideHeader title="TV GUIDE" sliceLabel={formatSliceLabel(currentSlice)} />
+        <GuideHeader
+          title="TV GUIDE"
+          meta={formatSliceLabel(currentSlice)}
+          secondaryLink={{ href: "/preferences", label: "Preferences" }}
+        />
         <UserSwitcher
           selectedUserId={userId}
           users={users}
           onChange={(nextUserId) => {
             setUserId(nextUserId);
-            window.localStorage.setItem("tv-guide-user-id", nextUserId);
+            writeStoredUserId(nextUserId);
           }}
         />
         <SliceNavigator

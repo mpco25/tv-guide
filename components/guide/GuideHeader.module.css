@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 80px 1fr auto;
+  grid-template-columns: 1fr auto;
   gap: 16px;
   align-items: center;
   padding: 18px 20px;
@@ -8,14 +8,15 @@
   background: linear-gradient(90deg, rgba(255, 212, 71, 0.12), rgba(77, 208, 225, 0.08));
 }
 
-.pageMarker {
-  color: var(--accent);
-  font-weight: 700;
-}
-
 .title {
   letter-spacing: 0.18em;
   font-weight: 700;
+}
+
+.metaArea {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .slice {
@@ -24,9 +25,19 @@
   white-space: nowrap;
 }
 
+.link {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 @media (max-width: 700px) {
   .header {
     grid-template-columns: 1fr;
+  }
+
+  .metaArea {
+    justify-content: space-between;
   }
 
   .slice {

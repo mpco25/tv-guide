@@ -55,5 +55,5 @@ export function buildGuideRows({
       channelName: channel.name,
       segments
     };
-  });
+  }).filter((row) => preferences.showEmptyChannels || row.segments.length > 0);
 }
